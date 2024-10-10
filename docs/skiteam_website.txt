@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine Ski Team</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        nav {
+            margin: 0;
+            padding: 1rem;
+            background-color: #00509e;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 1rem;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 2rem;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #003366;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Alpine Ski Team Fundraising & Social Site</h1>
+    </header>
+    
+    <nav>
+        <a href="#team">Team</a>
+        <a href="#events">Events</a>
+        <a href="#fundraising">Fundraising</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <main>
+        <!-- Team Section -->
+        <section id="team">
+            <h2>Meet the Team</h2>
+            <p>Here’s where we introduce the team members with their photos and bios.</p>
+            <!-- Team member profiles can go here -->
+        </section>
+
+        <!-- Events Section -->
+        <section id="events">
+            <h2>Upcoming Events</h2>
+            <p>Check out our upcoming races and fundraisers!</p>
+            <!-- Add an event calendar here -->
+        </section>
+
+        <!-- Fundraising Section -->
+        <section id="fundraising">
+            <h2>Support Our Team</h2>
+            <p>Help us reach our goals by donating!</p>
+            <!-- Donation form and progress bar can go here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Alpine Ski Team</p>
+    </footer>
+
+    <script>
+        // JavaScript for interactive elements will go here
+    </script>
+</body>
+</html>
