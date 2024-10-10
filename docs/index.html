@@ -3,87 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpine Ski Team</title>
+    <title>Alpine Ski Team - University of Rochester</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f4f4f4; /* Light grey background */
+            color: #333;
         }
+
+        /* Colors */
+        :root {
+            --primary-blue: #00356B;
+            --secondary-yellow: #FFD100;
+            --white: #ffffff;
+            --light-grey: #f0f0f5;
+        }
+
+        /* Hero Section */
         header {
-            background-color: #003366;
+            background-image: url('https://your-image-url.com'); /* You can add your own image here */
+            background-size: cover;
+            background-position: center;
             color: white;
             text-align: center;
-            padding: 1rem 0;
+            padding: 4rem 0;
         }
-        nav {
+
+        header h1 {
+            font-size: 3rem;
             margin: 0;
-            padding: 1rem;
-            background-color: #00509e;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add text shadow for contrast */
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: var(--primary-blue);
+            padding: 1rem 0;
             text-align: center;
         }
+
         nav a {
-            margin: 0 1rem;
-            color: white;
+            color: var(--white);
             text-decoration: none;
+            margin: 0 1rem;
             font-weight: bold;
+            text-transform: uppercase; /* Uppercase for a cleaner look */
         }
+
+        nav a:hover {
+            color: var(--secondary-yellow); /* Yellow on hover */
+        }
+
+        /* Main Content */
         main {
             padding: 2rem;
         }
-        section {
-            margin-bottom: 2rem;
+
+        h2 {
+            font-weight: 600;
+            color: var(--primary-blue);
         }
-        footer {
-            text-align: center;
+
+        /* Team Section */
+        #team {
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .team-member {
+            background-color: var(--white);
             padding: 1rem;
-            background-color: #003366;
-            color: white;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--secondary-yellow); /* Add yellow border */
+        }
+
+        /* Fundraising Section */
+        .fundraising-progress {
+            background-color: var(--white);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .progress-bar {
+            background-color: var(--secondary-yellow);
+            height: 20px;
+            width: 60%;
+            border-radius: 10px;
+        }
+
+        /* Countdown Timer */
+        #countdown {
+            font-size: 1.5rem;
+            margin: 2rem 0;
+            color: var(--primary-blue);
+        }
+
+        /* Design Competition Section */
+        #design-competition {
+            padding: 4rem 2rem;
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        #design-competition h2 {
+            color: var(--primary-blue);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid var(--secondary-yellow); /* Yellow underline for emphasis */
+            display: inline-block;
+        }
+
+        /* Button for Google Form Link */
+        .btn-form {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 2rem;
+        }
+
+        .btn-form:hover {
+            background-color: var(--secondary-yellow);
+            color: var(--primary-blue);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        /* Button Styles */
+        .btn {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-yellow);
+            color: var(--primary-blue);
         }
     </style>
 </head>
 <body>
+    <!-- Hero Section -->
     <header>
-        <h1>Alpine Ski Team Fundraising & Social Site</h1>
+        <h1>Alpine Ski Team - University of Rochester</h1>
+        <p>Join us on our journey to success!</p>
+        <a href="#fundraising" class="btn">Donate Now</a>
     </header>
-    
+
+    <!-- Navigation -->
     <nav>
         <a href="#team">Team</a>
         <a href="#events">Events</a>
         <a href="#fundraising">Fundraising</a>
         <a href="#contact">Contact</a>
     </nav>
-    
+
+    <!-- Main Content -->
     <main>
         <!-- Team Section -->
         <section id="team">
             <h2>Meet the Team</h2>
-            <p>Here’s where we introduce the team members with their photos and bios.</p>
-            <!-- Team member profiles can go here -->
-        </section>
-
-        <!-- Events Section -->
-        <section id="events">
-            <h2>Upcoming Events</h2>
-            <p>Check out our upcoming races and fundraisers!</p>
-            <!-- Add an event calendar here -->
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Jason Richards">
+                <h3>Jason Richards</h3>
+                <p>Social + Fundraising Chair</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Elizabeth Martin">
+                <h3>Elizabeth Martin</h3>
+                <p>Co-Captain</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Josephine Freis">
+                <h3>Josephine Freis</h3>
+                <p>Vice-President</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Asa Guldbrandsen">
+                <h3>Asa Guldbrandsen</h3>
+                <p>Co-Captain</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Jacob Cohen">
+                <h3>Jacob Cohen</h3>
+                <p>Business Manager</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Emma Chou">
+                <h3>Emma Chou</h3>
+                <p>Dryland Coordinator + Equipment Manager</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Katie Jones">
+                <h3>Katie Jones</h3>
+                <p>Social + Fundraising Chair</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Owen Scinta">
+                <h3>Owen Scinta</h3>
+                <p>Dryland Coordinator + Equipment Manager</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Eleanor Stanton">
+                <h3>Eleanor Stanton</h3>
+                <p>President</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Kyle deManincor">
+                <h3>Kyle deManincor</h3>
+                <p>Advisor</p>
+            </div>
         </section>
 
         <!-- Fundraising Section -->
         <section id="fundraising">
             <h2>Support Our Team</h2>
-            <p>Help us reach our goals by donating!</p>
-            <!-- Donation form and progress bar can go here -->
+            <p>Help us reach our fundraising goal by donating!</p>
+            <div class="fundraising-progress">
+                <h3>Fundraising Progress</h3>
+                <div class="progress-bar"></div>
+                <p>60% of our goal raised!</p>
+            </div>
+        </section>
+
+        <!-- Design Competition Section -->
+        <section id="design-competition">
+            <h2>Submit Your Design!</h2>
+            <p>Submit your design for a chance to see it on our team’s shirts and hoodies!</p>
+            <!-- Button Link to Google Form -->
+            <a href="https://forms.gle/L4FRo5NazffE6Mgr6" target="_blank" class="btn-form">Submit Your Design</a>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Alpine Ski Team</p>
+        <p>&copy; 2024 Alpine Ski Team - University of Rochester</p>
     </footer>
-
-    <script>
-        // JavaScript for interactive elements will go here
-    </script>
 </body>
 </html>
