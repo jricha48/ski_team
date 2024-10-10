@@ -136,11 +136,21 @@
             display: inline-block;
         }
 
-        /* Embedded Google Form */
-        iframe {
-            width: 100%;
-            height: 800px;
-            border: none;
+        /* Button for Google Form Link */
+        .btn-form {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 2rem;
+        }
+
+        .btn-form:hover {
+            background-color: var(--secondary-yellow);
+            color: var(--primary-blue);
         }
 
         /* Footer */
@@ -190,61 +200,51 @@
         <!-- Team Section -->
         <section id="team">
             <h2>Meet the Team</h2>
-
             <div class="team-member">
                 <img src="https://via.placeholder.com/150" alt="Jason Richards">
                 <h3>Jason Richards</h3>
                 <p>Social + Fundraising Chair</p>
             </div>
-
             <div class="team-member">
                 <img src="https://via.placeholder.com/150" alt="Elizabeth Martin">
                 <h3>Elizabeth Martin</h3>
                 <p>Co-Captain</p>
             </div>
-
             <div class="team-member">
                 <img src="https://via.placeholder.com/150" alt="Josephine Freis">
                 <h3>Josephine Freis</h3>
                 <p>Vice-President</p>
             </div>
-
             <div class="team-member">
                 <img src="https://via.placeholder.com/150" alt="Asa Guldbrandsen">
                 <h3>Asa Guldbrandsen</h3>
                 <p>Co-Captain</p>
             </div>
-
             <div class="team-member">
                 <img src="https://via.placeholder.com/150" alt="Jacob Cohen">
                 <h3>Jacob Cohen</h3>
                 <p>Business Manager</p>
             </div>
-
             <div class="team-member">
                 <img src="https://via.placeholder.com/150" alt="Emma Chou">
                 <h3>Emma Chou</h3>
                 <p>Dryland Coordinator + Equipment Manager</p>
             </div>
-
             <div class="team-member">
                 <img src="https://via.placeholder.com/150" alt="Katie Jones">
                 <h3>Katie Jones</h3>
                 <p>Social + Fundraising Chair</p>
             </div>
-
             <div class="team-member">
                 <img src="https://via.placeholder.com/150" alt="Owen Scinta">
                 <h3>Owen Scinta</h3>
                 <p>Dryland Coordinator + Equipment Manager</p>
             </div>
-
             <div class="team-member">
                 <img src="https://via.placeholder.com/150" alt="Eleanor Stanton">
                 <h3>Eleanor Stanton</h3>
                 <p>President</p>
             </div>
-
             <div class="team-member">
                 <img src="https://via.placeholder.com/150" alt="Kyle deManincor">
                 <h3>Kyle deManincor</h3>
@@ -267,8 +267,8 @@
         <section id="design-competition">
             <h2>Submit Your Design!</h2>
             <p>Submit your design for a chance to see it on our team’s shirts and hoodies!</p>
-            <!-- Embedded Google Form -->
-            <iframe src="https://forms.gle/rVjxCcv5R3UZrWmy9" frameborder="0">Loading…</iframe>
+            <!-- Button Link to Google Form -->
+            <a href="https://forms.gle/L4FRo5NazffE6Mgr6" target="_blank" class="btn-form">Submit Your Design</a>
         </section>
     </main>
 
