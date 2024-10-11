@@ -25,12 +25,16 @@
 
         /* Hero Section */
         header {
-            background-image: url('photo1.jpeg'); /* You can add your own image here */
             background-size: cover;
             background-position: center;
-            color: white;
-            text-align: center;
-            padding: 4rem 0;
+            animation: slideshow 10s infinite;
+        }
+        
+        @keyframes slideshow {
+            0% { background-image: url('photo1.jpeg'); }
+            33% { background-image: url('photo2.jpeg'); }
+            66% { background-image: url('photo3.jpeg'); }
+            100% { background-image: url('photo1.jpeg'); }
         }
 
         header h1 {
@@ -183,7 +187,6 @@
     <!-- Hero Section -->
     <header>
         <h1>Alpine Ski Team - University of Rochester</h1>
-        <p>Join us on our journey to success!</p>
         <a href="#fundraising" class="btn">Donate Now</a>
     </header>
 
