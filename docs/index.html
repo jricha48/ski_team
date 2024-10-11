@@ -23,10 +23,12 @@
             --light-grey: #f0f0f5;
         }
 
-        /* Hero Section */
         header {
             background-size: cover;
             background-position: center;
+            text-align: center;
+            color: white;
+            padding: 4rem 0;
             animation: slideshow 27s infinite;
         }
         
@@ -42,17 +44,33 @@
             88.88% { background-image: url('photo9.jpeg'); }
             100% { background-image: url('photo1.jpeg'); }
         }
-
+        
         header h1 {
             font-size: 3rem;
             margin: 0;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add text shadow for contrast */
         }
-
+        
         header p {
             font-size: 1.5rem;
             margin-bottom: 2rem;
         }
+        
+        .btn {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-yellow);
+            color: var(--primary-blue);
+        }
+
 
         /* Navigation Bar */
         nav {
