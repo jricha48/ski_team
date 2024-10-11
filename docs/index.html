@@ -22,54 +22,35 @@
             --white: #ffffff;
             --light-grey: #f0f0f5;
         }
-
+        
         header {
             background-size: cover;
             background-position: center;
             text-align: center;
             color: white;
             padding: 4rem 0;
-        .slideshow-container {
-            position: relative;
-            width: 100%;
-            height: 400px; /* Set desired height */
-            overflow: hidden;
+            animation: slideshow 45s infinite;
         }
         
-        .slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            animation: fade 27s infinite;
-        }
-        
-        .slide:nth-child(1) { animation-delay: 0s; }
-        .slide:nth-child(2) { animation-delay: 3s; }
-        .slide:nth-child(3) { animation-delay: 6s; }
-        .slide:nth-child(4) { animation-delay: 9s; }
-        .slide:nth-child(5) { animation-delay: 12s; }
-        .slide:nth-child(6) { animation-delay: 15s; }
-        .slide:nth-child(7) { animation-delay: 18s; }
-        .slide:nth-child(8) { animation-delay: 21s; }
-        .slide:nth-child(9) { animation-delay: 24s; }
-        
-        @keyframes fade {
-            0% { opacity: 0; }
-            10% { opacity: 1; }
-            33% { opacity: 1; }
-            43% { opacity: 0; }
-            100% { opacity: 0; }
+        @keyframes slideshow {
+            0% { background-image: url('photo1.jpeg'); }
+            11.11% { background-image: url('photo2.jpg'); }
+            22.22% { background-image: url('photo3.jpg'); }
+            33.33% { background-image: url('photo4.jpg'); }
+            44.44% { background-image: url('photo5.jpg'); }
+            55.55% { background-image: url('photo6.jpg'); }
+            66.66% { background-image: url('photo7.jpg'); }
+            77.77% { background-image: url('photo8.jpeg'); }
+            88.88% { background-image: url('photo9.jpeg'); }
+            100% { background-image: url('photo1.jpeg'); }
         }
 
         
-        header h1 {
+        header h1, header a{
             font-size: 3rem;
             margin: 0;
+            position: relative;
+            z-index:10;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add text shadow for contrast */
         }
         
