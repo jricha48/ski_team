@@ -32,25 +32,43 @@
             min-height: 500px;
             padding: 3rem 0; /* Increased padding for a larger background */
             animation: slideshow 45s infinite;
+            transition: 
         }
         
         @keyframes slideshow {
-            0% { background-image: url('photo1.jpeg'); }
-            11.11% { background-image: url('photo2.jpg'); }
-            22.22% { background-image: url('photo3.jpg'); }
-            33.33% { background-image: url('photo4.jpg'); }
-            44.44% { background-image: url('photo5.jpg'); }
-            55.55% { background-image: url('photo6.jpg'); }
-            66.66% { background-image: url('photo7.jpg'); }
-            77.77% { background-image: url('photo8.jpeg'); }
-            88.88% { background-image: url('photo9.jpeg'); }
-            100% { background-image: url('photo1.jpeg'); }
+            0%, 11.11% { background-image: url('photo1.jpeg'); opacity: 1; }
+            11.12%, 22.22% { opacity: 0; }
+        
+            22.23%, 33.33% { background-image: url('photo2.jpeg'); opacity: 1; }
+            33.34%, 44.44% { opacity: 0; }
+        
+            44.45%, 55.55% { background-image: url('photo3.jpeg'); opacity: 1; }
+            55.56%, 66.66% { opacity: 0; }
+        
+            66.67%, 77.77% { background-image: url('photo4.jpeg'); opacity: 1; }
+            77.78%, 88.88% { opacity: 0; }
+        
+            88.89%, 100% { background-image: url('photo5.jpeg'); opacity: 1; }
+            100.01%, 111.11% { opacity: 0; }
+        
+            111.12%, 122.22% { background-image: url('photo6.jpeg'); opacity: 1; }
+            122.23%, 133.33% { opacity: 0; }
+        
+            133.34%, 144.44% { background-image: url('photo7.jpeg'); opacity: 1; }
+            144.45%, 155.55% { opacity: 0; }
+        
+            155.56%, 166.66% { background-image: url('photo8.jpeg'); opacity: 1; }
+            166.67%, 177.77% { opacity: 0; }
+        
+            177.78%, 188.88% { background-image: url('photo9.jpeg'); opacity: 1; }
+            188.89%, 200% { opacity: 0; }
         }
+
         
         header h1 {
-            font-size: 1.8rem; /* Smaller text */
+            font-size: 2rem; /* Smaller text */
             margin: 0;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Add text shadow for contrast */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add text shadow for contrast */
         }
         
         header p {
