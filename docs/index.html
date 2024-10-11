@@ -28,7 +28,7 @@
             background-position: center;
             text-align: center;
             color: white;
-            padding: 4rem 0;
+            padding: 6rem 0; /* Increased padding for a larger background */
             animation: slideshow 45s infinite;
         }
         
@@ -44,35 +44,34 @@
             88.88% { background-image: url('photo9.jpeg'); }
             100% { background-image: url('photo1.jpeg'); }
         }
-
         
-        header h1, header a{
-            font-size: 3rem;
+        header h1 {
+            font-size: 2rem; /* Smaller text */
             margin: 0;
-            position: relative;
-            z-index:10;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add text shadow for contrast */
         }
         
         header p {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
+            font-size: 1rem; /* Smaller text */
+            margin-bottom: 1.5rem;
         }
         
         .btn {
             background-color: var(--primary-blue);
             color: var(--white);
-            padding: 0.75rem 1.5rem;
+            padding: 0.5rem 1rem; /* Smaller button */
             border: none;
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
+            font-size: 0.9rem; /* Reduced button font size */
         }
         
         .btn:hover {
             background-color: var(--secondary-yellow);
             color: var(--primary-blue);
         }
+
 
 
         /* Navigation Bar */
