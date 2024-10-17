@@ -86,27 +86,24 @@
       padding: 20px 0;
     }
     footer a {
-      color: #FFFFFF; /* Set text color to always be white */
+      color: #FFFFFF !important; /* Force the text color to always be white */
       text-decoration: none;
-      font-size: 1.5rem; /* Large font size for emphasis */
-      font-weight: bold; /* Make text bold */
-      background-color: #00356B; /* Background color for Instagram link */
-      padding: 10px 20px; /* Padding around the link for better spacing */
-      border-radius: 5px; /* Rounded corners */
-      display: inline-block; /* Block-level for easy styling */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for emphasis */
-    }
-    
-    footer a i {
-      color: #FFD100; /* Set Instagram icon color to yellow */
-      margin-right: 10px; /* Add space between icon and text */
+      font-size: 1.5rem; /* Larger font size for visibility */
+      font-weight: bold; /* Make the text bold */
+      background-color: #00356B; /* Ensure dark background for contrast */
+      padding: 10px 20px; /* Padding for spacing */
+      border-radius: 8px; /* Rounded corners for better visibility */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add shadow to elevate link */
+      z-index: 10; /* Ensure the link is on top */
+      display: inline-block; /* Ensure the link is treated as a block element */
     }
     
     footer a:hover {
       background-color: #FFD100; /* Yellow background on hover */
-      color: #00356B !important; /* Text becomes dark blue on hover */
-      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Make shadow stronger on hover */
+      color: #00356B !important; /* Dark text on hover for contrast */
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4); /* Darker shadow on hover */
     }
+
 
 
     /* Button Styles */
