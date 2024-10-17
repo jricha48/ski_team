@@ -7,13 +7,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Check if the file was uploaded without errors
     if ($design['error'] !== UPLOAD_ERR_OK) {
-        echo "An error occurred during file upload.";
+        // Redirect back to the form with an error message
+        header('Location: index.php?error=upload');
         exit;
     }
 
     // Validate file size (limit to 5MB)
     if ($design['size'] > 5000000) {
-        echo "Sorry, your file is too large. Limit is 5MB.";
+        // Redirect back to the form with an error message
+        header('Location: index.php?error=size');
         exit;
     }
 
@@ -24,7 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $file_mime_type = $finfo->file($design['tmp_name']);
 
     if (!in_array($file_mime_type, $allowed_mime_types)) {
-        echo "Invalid file type.";
+        // Redirect back to the form with an error message
+        header('Location: index.php?error=type');
         exit;
     }
 
@@ -37,16 +40,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Generate a unique file name
-    $ext = pathinfo($design['name'], PATHINFO_EXTENSION);
-    $unique_name = uniqid('design_', true) . '.' . $ext;
-    $target_file = $target_dir . $unique_name;
-
-    // Move the uploaded file
-    if (move_uploaded_file($design['tmp_name'], $target_file)) {
-        echo "Your design has been successfully uploaded. Thank you!";
-        // Optionally, you can send a confirmation email to the user or save details to a database
-    } else {
-        echo "Sorry, there was an error uploading your file.";
-    }
-}
-?>
+    $ext = pathinfo($design['name'], PATHINFO_
