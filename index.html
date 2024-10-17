@@ -262,14 +262,25 @@
                 <p>60% of our goal raised!</p>
             </div>
         </section>
-
         <!-- Design Competition Section -->
         <section id="design-competition">
             <h2>Submit Your Design!</h2>
             <p>Submit your design for a chance to see it on our team’s shirts and hoodies!</p>
-            <!-- Button Link to Google Form -->
-            <a href="https://forms.gle/ccpTvWp2dLc6bmTu8" target="_blank" class="btn-form">Submit Your Design</a>
+            <!-- Design Submission Form -->
+            <form action="submit_design.php" method="POST" enctype="multipart/form-data">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+        
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+        
+                <label for="design">Upload Your Design (JPG, JPEG, PNG, PDF):</label><br>
+                <input type="file" id="design" name="design" accept=".jpg, .jpeg, .png, .pdf" required><br><br>
+        
+                <input type="submit" value="Submit Design" class="btn">
+            </form>
         </section>
+
     </main>
 
     <!-- Footer -->
