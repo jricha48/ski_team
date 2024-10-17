@@ -1,302 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpine Ski Team - University of Rochester</title>
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4; /* Light grey background */
-            color: #333;
-        }
+  <meta charset="UTF-8">
+  <title>Alpine Ski Team - University of Rochester</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        /* Colors */
-        :root {
-            --primary-blue: #00356B;
-            --secondary-yellow: #FFD100;
-            --white: #ffffff;
-            --light-grey: #f0f0f5;
-        }
+  <!-- Bootstrap CSS -->
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
 
-        /* Hero Section */
-        header {
-            background-image: url('https://your-image-url.com'); /* You can add your own image here */
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 4rem 0;
-        }
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
 
-        header h1 {
-            font-size: 3rem;
-            margin: 0;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add text shadow for contrast */
-        }
-
-        header p {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        /* Navigation Bar */
-        nav {
-            background-color: var(--primary-blue);
-            padding: 1rem 0;
-            text-align: center;
-        }
-
-        nav a {
-            color: var(--white);
-            text-decoration: none;
-            margin: 0 1rem;
-            font-weight: bold;
-            text-transform: uppercase; /* Uppercase for a cleaner look */
-        }
-
-        nav a:hover {
-            color: var(--secondary-yellow); /* Yellow on hover */
-        }
-
-        /* Main Content */
-        main {
-            padding: 2rem;
-        }
-
-        h2 {
-            font-weight: 600;
-            color: var(--primary-blue);
-        }
-
-        /* Team Section */
-        #team {
-            padding: 4rem 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-
-        .team-member {
-            background-color: var(--white);
-            padding: 1rem;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .team-member img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--secondary-yellow); /* Add yellow border */
-        }
-
-        /* Fundraising Section */
-        .fundraising-progress {
-            background-color: var(--white);
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 1rem;
-            text-align: center;
-        }
-
-        .progress-bar {
-            background-color: var(--secondary-yellow);
-            height: 20px;
-            width: 60%;
-            border-radius: 10px;
-        }
-
-        /* Countdown Timer */
-        #countdown {
-            font-size: 1.5rem;
-            margin: 2rem 0;
-            color: var(--primary-blue);
-        }
-
-        /* Design Competition Section */
-        #design-competition {
-            padding: 4rem 2rem;
-            background-color: var(--white);
-            text-align: center;
-        }
-
-        #design-competition h2 {
-            color: var(--primary-blue);
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            border-bottom: 3px solid var(--secondary-yellow); /* Yellow underline for emphasis */
-            display: inline-block;
-        }
-
-        /* Button for Google Form Link */
-        .btn-form {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 2rem;
-        }
-
-        .btn-form:hover {
-            background-color: var(--secondary-yellow);
-            color: var(--primary-blue);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
-        }
-
-        /* Button Styles */
-        .btn {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .btn:hover {
-            background-color: var(--secondary-yellow);
-            color: var(--primary-blue);
-        }
-    </style>
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    /* Navbar */
+    .navbar-brand {
+      font-weight: 600;
+    }
+    /* Hero Section */
+    .hero {
+      background-image: url('images/hero-skiing.jpg'); /* Update with your skiing image */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      position: relative;
+      height: 100vh;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 53, 107, 0.7); /* Overlay color */
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+    }
+    .hero-content h1 {
+      font-size: 4rem;
+      font-weight: 600;
+    }
+    .hero-content p {
+      font-size: 1.5rem;
+    }
+    /* Sections */
+    section {
+      padding: 60px 0;
+    }
+    /* Team Section */
+    .team-member {
+      margin-bottom: 30px;
+    }
+    .team-member img {
+      width: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      height: 300px; /* Set a consistent height */
+    }
+    .team-member h5 {
+      margin-top: 15px;
+      font-weight: 600;
+    }
+    /* Footer */
+    footer {
+      background-color: #00356B;
+      color: white;
+      padding: 20px 0;
+    }
+    footer a {
+      color: #FFD100;
+      text-decoration: none;
+    }
+    /* Buttons */
+    .btn-primary {
+      background-color: #FFD100;
+      border-color: #FFD100;
+      color: #00356B;
+      font-weight: 600;
+    }
+    .btn-primary:hover {
+      background-color: #00356B;
+      border-color: #00356B;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <header>
-        <h1>Alpine Ski Team - University of Rochester</h1>
-        <p>Join us on our journey to success!</p>
-        <a href="#fundraising" class="btn">Donate Now</a>
-    </header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #00356B;">
+    <div class="container">
+      <a class="navbar-brand" href="#">UR Alpine Ski Team</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="#team">Team</a>
-        <a href="#events">Events</a>
-        <a href="#fundraising">Fundraising</a>
-        <a href="#contact">Contact</a>
-    </nav>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="#fundraising">Fundraising</a></li>
+          <li class="nav-item"><a class="nav-link" href="#design-competition">Design Competition</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Team Section -->
-        <section id="team">
-            <h2>Meet the Team</h2>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Jason Richards">
-                <h3>Jason Richards</h3>
-                <p>Social + Fundraising Chair</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Elizabeth Martin">
-                <h3>Elizabeth Martin</h3>
-                <p>Co-Captain</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Josephine Freis">
-                <h3>Josephine Freis</h3>
-                <p>Vice-President</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Asa Guldbrandsen">
-                <h3>Asa Guldbrandsen</h3>
-                <p>Co-Captain</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Jacob Cohen">
-                <h3>Jacob Cohen</h3>
-                <p>Business Manager</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Emma Chou">
-                <h3>Emma Chou</h3>
-                <p>Dryland Coordinator + Equipment Manager</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Katie Jones">
-                <h3>Katie Jones</h3>
-                <p>Social + Fundraising Chair</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Owen Scinta">
-                <h3>Owen Scinta</h3>
-                <p>Dryland Coordinator + Equipment Manager</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Eleanor Stanton">
-                <h3>Eleanor Stanton</h3>
-                <p>President</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Kyle deManincor">
-                <h3>Kyle deManincor</h3>
-                <p>Advisor</p>
-            </div>
-        </section>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Alpine Ski Team</h1>
+      <p>University of Rochester</p>
+      <a href="#fundraising" class="btn btn-primary btn-lg">Donate Now</a>
+    </div>
+  </header>
 
-        <!-- Fundraising Section -->
-        <section id="fundraising">
-            <h2>Support Our Team</h2>
-            <p>Help us reach our fundraising goal by donating!</p>
-            <div class="fundraising-progress">
-                <h3>Fundraising Progress</h3>
-                <div class="progress-bar"></div>
-                <p>60% of our goal raised!</p>
-            </div>
-        </section>
-        <!-- Design Competition Section -->
-        <section id="design-competition">
-            <h2>Submit Your Design!</h2>
-            <p>Submit your design for a chance to see it on our team’s shirts and hoodies!</p>
-            <!-- Design Submission Form -->
-            <form action="submit_design.php" method="POST" enctype="multipart/form-data">
-                <!-- Name Field -->
-                <div>
-                    <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <br>
-                <!-- Email Field -->
-                <div>
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <br>
-                <!-- File Upload Field -->
-                <div>
-                    <label for="design">Upload Your Design (JPG, JPEG, PNG, PDF):</label><br>
-                    <input type="file" id="design" name="design" accept=".jpg, .jpeg, .png, .pdf" required>
-                </div>
-                <br>
-                <!-- Submit Button -->
-                <input type="submit" value="Submit Design" class="btn">
-            </form>
-        </section>
+  <!-- Main Content -->
+  <main>
+    <!-- Team Section -->
+    <section id="team" class="container text-center">
+      <h2 class="font-weight-bold mb-5">Meet the Team</h2>
+      <div class="row">
+        <!-- Team Member 1 -->
+        <div class="col-md-4 team-member">
+          <img src="images/eleanor-stanton.jpg" alt="Portrait of Eleanor Stanton, President">
+          <h5>Eleanor Stanton</h5>
+          <p>President</p>
+        </div>
+        <!-- Team Member 2 -->
+        <div class="col-md-4 team-member">
+          <img src="images/josephine-freis.jpg" alt="Portrait of Josephine Freis, Vice-President">
+          <h5>Josephine Freis</h5>
+          <p>Vice-President</p>
+        </div>
+        <!-- Team Member 3 -->
+        <div class="col-md-4 team-member">
+          <img src="images/asa-guldbrandsen.jpg" alt="Portrait of Asa Guldbrandsen, Co-Captain">
+          <h5>Asa Guldbrandsen</h5>
+          <p>Co-Captain</p>
+        </div>
+        <!-- Team Member 4 -->
+        <div class="col-md-4 team-member">
+          <img src="images/elizabeth-martin.jpg" alt="Portrait of Elizabeth Martin, Co-Captain">
+          <h5>Elizabeth Martin</h5>
+          <p>Co-Captain</p>
+        </div>
+        <!-- Team Member 5 -->
+        <div class="col-md-4 team-member">
+          <img src="images/jacob-cohen.jpg" alt="Portrait of Jacob Cohen, Business Manager">
+          <h5>Jacob Cohen</h5>
+          <p>Business Manager</p>
+        </div>
+        <!-- Team Member 6 -->
+        <div class="col-md-4 team-member">
+          <img src="images/emma-chou.jpg" alt="Portrait of Emma Chou, Dryland Coordinator and Equipment Manager">
+          <h5>Emma Chou</h5>
+          <p>Dryland Coordinator &amp; Equipment Manager</p>
+        </div>
+        <!-- Team Member 7 -->
+        <div class="col-md-4 team-member">
+          <img src="images/owen-scinta.jpg" alt="Portrait of Owen Scinta, Dryland Coordinator and Equipment Manager">
+          <h5>Owen Scinta</h5>
+          <p>Dryland Coordinator &amp; Equipment Manager</p>
+        </div>
+        <!-- Team Member 8 -->
+        <div class="col-md-4 team-member">
+          <img src="images/jason-richards.jpg" alt="Portrait of Jason Richards, Social and Fundraising Chair">
+          <h5>Jason Richards</h5>
+          <p>Social &amp; Fundraising Chair</p>
+        </div>
+        <!-- Team Member 9 -->
+        <div class="col-md-4 team-member">
+          <img src="images/katie-jones.jpg" alt="Portrait of Katie Jones, Social and Fundraising Chair">
+          <h5>Katie Jones</h5>
+          <p>Social &amp; Fundraising Chair</p>
+        </div>
+        <!-- Team Member 10 -->
+        <div class="col-md-4 team-member">
+          <img src="images/kyle-demanincor.jpg" alt="Portrait of Kyle deManincor, Advisor">
+          <h5>Kyle deManincor</h5>
+          <p>Advisor</p>
+        </div>
+      </div>
+    </section>
 
+    <!-- Fundraising Section -->
+    <section id="fundraising" class="bg-light text-center">
+      <div class="container">
+        <h2 class="font-weight-bold mb-4">Support Our Team</h2>
+        <p class="mb-4">Help us reach our fundraising goal by donating!</p>
+        <div class="progress mb-3" style="height: 30px;">
+          <div
+            class="progress-bar progress-bar-striped"
+            role="progressbar"
+            style="width: 60%; background-color: #FFD100; color: #00356B;"
+            aria-valuenow="60"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            60% Complete
+          </div>
+        </div>
+        <a href="your-donation-link.html" class="btn btn-primary btn-lg">Donate Now</a>
+      </div>
+    </section>
 
-    </main>
+    <!-- Design Competition Section -->
+    <section id="design-competition">
+      <div class="container text-center my-5">
+        <h2 class="font-weight-bold mb-4">Submit Your Design!</h2>
+        <p class="mb-4">Submit your design for a chance to see it on our team’s shirts and hoodies!</p>
+        <!-- Embed Google Form -->
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeOViyc0HExvMzd7tf1jrKWCWFEb4WY1IYAqtHwtD92xSt9Dw/viewform?embedded=true"
+          width="100%"
+          height="1200px"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+        >
+          Loading…
+        </iframe>
+      </div>
+    </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Alpine Ski Team - University of Rochester</p>
-    </footer>
+    <!-- Contact Section -->
+    <section id="contact" class="bg-light text-center">
+      <div class="container">
+        <h2 class="font-weight-bold mb-4">Contact Us</h2>
+        <p>Email: <a href="mailto:skiteam.ur@gmail.com">UR Ski Team &lt;skiteam.ur@gmail.com&gt;</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <!-- Social Media Icons -->
+      <p>Follow us on Instagram:</p>
+      <a href="https://www.instagram.com/ur.alpineskiing" target="_blank">
+        <i class="fab fa-instagram fa-2x mx-2"></i>
+      </a>
+      <p class="mt-3">&copy; 2024 Alpine Ski Team - University of Rochester</p>
+    </div>
+  </footer>
+
+  <!-- jQuery and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"
+  ></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
 </body>
 </html>
