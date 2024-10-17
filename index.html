@@ -268,18 +268,29 @@
             <p>Submit your design for a chance to see it on our team’s shirts and hoodies!</p>
             <!-- Design Submission Form -->
             <form action="submit_design.php" method="POST" enctype="multipart/form-data">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
-        
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
-        
-                <label for="design">Upload Your Design (JPG, JPEG, PNG, PDF):</label><br>
-                <input type="file" id="design" name="design" accept=".jpg, .jpeg, .png, .pdf" required><br><br>
-        
+                <!-- Name Field -->
+                <div>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <br>
+                <!-- Email Field -->
+                <div>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <br>
+                <!-- File Upload Field -->
+                <div>
+                    <label for="design">Upload Your Design (JPG, JPEG, PNG, PDF):</label><br>
+                    <input type="file" id="design" name="design" accept=".jpg, .jpeg, .png, .pdf" required>
+                </div>
+                <br>
+                <!-- Submit Button -->
                 <input type="submit" value="Submit Design" class="btn">
             </form>
         </section>
+
 
     </main>
 
