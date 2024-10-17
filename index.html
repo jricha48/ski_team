@@ -6,16 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-  />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
   <!-- Google Font -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- Custom Styles -->
   <style>
@@ -28,7 +22,7 @@
     }
     /* Hero Section */
     .hero {
-      background-image: url('images/hero-skiing.jpg'); /* Update with your skiing image */
+      background-image: url('images/hero-skiing.jpg');
       background-size: cover;
       background-position: center;
       color: white;
@@ -64,17 +58,26 @@
     }
     /* Team Section */
     .team-member {
-      margin-bottom: 30px;
+      margin-bottom: 20px; /* Reduced margin */
+      padding: 10px;       /* Added padding for spacing */
     }
     .team-member img {
-      width: 100%;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       object-fit: cover;
-      height: 300px; /* Set a consistent height */
+      border: 2px solid var(--secondary-yellow); /* Add yellow border */
     }
     .team-member h5 {
-      margin-top: 15px;
-      font-weight: 600;
+      margin-top: 10px; /* Reduced top margin */
+    }
+    /* Fundraising Section */
+    .progress {
+      height: 30px;
+    }
+    .progress-bar {
+      font-size: 1rem;
+      line-height: 30px;
     }
     /* Footer */
     footer {
@@ -86,7 +89,7 @@
       color: #FFD100;
       text-decoration: none;
     }
-    /* Buttons */
+    /* Button Styles */
     .btn-primary {
       background-color: #FFD100;
       border-color: #FFD100;
@@ -97,6 +100,13 @@
       background-color: #00356B;
       border-color: #00356B;
       color: white;
+    }
+    #design-competition {
+      padding: 2rem 1rem; /* Reduced padding */
+      text-align: center;
+    }
+    .btn-form {
+      margin-top: 1rem; /* Reduced margin */
     }
   </style>
 </head>
@@ -206,41 +216,29 @@
       </div>
     </section>
 
-    <!-- Fundraising Section -->
     <section id="fundraising" class="bg-light text-center">
       <div class="container">
         <h2 class="font-weight-bold mb-4">Support Our Team</h2>
         <p class="mb-4">Help us reach our fundraising goal by donating!</p>
+        <p>60% of our goal raised!</p> <!-- Text above the progress bar -->
         <div class="progress mb-3" style="height: 30px;">
-          <div
-            class="progress-bar progress-bar-striped"
-            role="progressbar"
-            style="width: 60%; background-color: #FFD100; color: #00356B;"
-            aria-valuenow="60"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          >
-            60% Complete
+          <div class="progress-bar progress-bar-striped" role="progressbar"
+               style="width: 60%; background-color: #FFD100; color: #00356B;"
+               aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
           </div>
         </div>
         <a href="your-donation-link.html" class="btn btn-primary btn-lg">Donate Now</a>
       </div>
     </section>
-
+  
     <!-- Design Competition Section -->
     <section id="design-competition">
       <div class="container text-center my-5">
         <h2 class="font-weight-bold mb-4">Submit Your Design!</h2>
         <p class="mb-4">Submit your design for a chance to see it on our team’s shirts and hoodies!</p>
         <!-- Embed Google Form -->
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSeOViyc0HExvMzd7tf1jrKWCWFEb4WY1IYAqtHwtD92xSt9Dw/viewform?embedded=true"
-          width="100%"
-          height="1200px"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0"
-        >
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeOViyc0HExvMzd7tf1jrKWCWFEb4WY1IYAqtHwtD92xSt9Dw/viewform?embedded=true"
+                width="100%" height="1200px" frameborder="0" marginheight="0" marginwidth="0">
           Loading…
         </iframe>
       </div>
