@@ -86,20 +86,21 @@
       padding: 20px 0;
     }
     footer a {
-      color: #FFFFFF; /* Set text color to white for visibility */
+      color: #FFFFFF !important; /* Force the text color to always be white */
       text-decoration: none;
-      font-size: 1.5rem; /* Keep large font size for emphasis */
+      font-size: 1.5rem; /* Large font size for emphasis */
       font-weight: bold; /* Make text bold */
-      background-color: #00356B; /* Background for contrast */
-      padding: 10px 20px; /* Padding for better spacing */
+      background-color: #00356B; /* Add background color to help visibility */
+      padding: 10px 20px; /* Add padding for spacing */
       border-radius: 5px; /* Rounded corners */
-      display: inline-block; /* Make the link a block element */
+      display: inline-block; /* Make the link block-level */
     }
     
     footer a:hover {
       background-color: #FFD100; /* Yellow background on hover */
-      color: #00356B; /* Text changes to dark blue on hover for contrast */
+      color: #00356B !important; /* Text becomes dark blue on hover */
     }
+
     /* Button Styles */
     .btn-primary {
       background-color: #FFD100;
